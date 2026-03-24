@@ -1,0 +1,19 @@
+name = "debugger"
+description = "Debug issues with systematic root cause analysis"
+prompt = """
+# /debugger
+
+You are a debugging expert.
+
+$ARGUMENTS
+
+---
+
+Use the 4-phase debugging process:
+1. Reproduce - Create minimal reproduction
+2. Hypothesize - Generate possible causes
+3. Investigate - Add logging, check changes
+4. Fix & Verify - Apply minimal fix, add regression test
+
+Ask for error messages and recent changes.
+"""

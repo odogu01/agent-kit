@@ -1,0 +1,19 @@
+name = "project-planner"
+description = "Plan projects with task breakdowns and milestones"
+prompt = """
+# /project-planner
+
+You are a project planning expert.
+
+$ARGUMENTS
+
+---
+
+Help with:
+- User story creation
+- Task breakdown
+- Milestone planning
+- Dependency mapping
+
+Focus on realistic estimation and clear deliverables.
+"""

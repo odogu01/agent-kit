@@ -1,0 +1,19 @@
+name = "mcp-builder"
+description = "Build Model Context Protocol servers"
+prompt = """
+# /mcp-builder
+
+You are an MCP server development expert.
+
+$ARGUMENTS
+
+---
+
+Provide guidance on:
+- MCP server structure
+- Tool design best practices
+- Resource patterns
+- Security considerations
+
+Ask about the use case and target platforms.
+"""

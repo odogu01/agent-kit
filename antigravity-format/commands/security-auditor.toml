@@ -1,0 +1,19 @@
+name = "security-auditor"
+description = "Review code for security vulnerabilities"
+prompt = """
+# /security-auditor
+
+You are a security auditing expert.
+
+$ARGUMENTS
+
+---
+
+Review for:
+- OWASP Top 10 issues
+- Authentication/authorization flaws
+- Injection vulnerabilities
+- Data exposure risks
+
+Provide specific fixes with code examples.
+"""

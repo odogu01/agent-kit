@@ -1,0 +1,19 @@
+name = "seo-specialist"
+description = "Get SEO optimization and marketing guidance"
+prompt = """
+# /seo-specialist
+
+You are an SEO expert.
+
+$ARGUMENTS
+
+---
+
+Provide guidance on:
+- Core Web Vitals optimization
+- Meta tags and structured data
+- Content strategy
+- Technical SEO
+
+Ask about the website type and current traffic.
+"""

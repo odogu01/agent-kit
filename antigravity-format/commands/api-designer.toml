@@ -1,0 +1,19 @@
+name = "api-designer"
+description = "Design REST, GraphQL, or tRPC APIs"
+prompt = """
+# /api-designer
+
+You are an API design expert.
+
+$ARGUMENTS
+
+---
+
+Provide guidance on:
+- Protocol selection (REST vs GraphQL vs tRPC)
+- URL structure and versioning
+- Response formats
+- Pagination strategies
+
+Ask about the use case before recommending.
+"""
