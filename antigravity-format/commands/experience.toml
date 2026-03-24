@@ -1,41 +1,66 @@
 name = "experience"
-description = "Recall past learnings and add new lessons to avoid repeating mistakes"
+description = "MANDATORY - Recall past lessons before EVERY task. This is automatic behavior, not optional."
 prompt = """
-# /experience
+# /experience - AI Memory System
 
-You maintain a systematic record of all learnings from mistakes and debugging.
+## ⚠️ MANDATORY BEHAVIOR
 
-$ARGUMENTS
+Before doing ANY task, I MUST:
+1. Identify the task TYPE
+2. Recall relevant past lessons
+3. Apply them to avoid mistakes
 
----
+## Auto-Check These Before Tasks:
 
-## Command Syntax
+| Task | Check First |
+|------|-------------|
+| Git operations | antigravity-setup, git-workflow |
+| Antigravity setup | antigravity-setup |
+| PowerShell commands | powershell |
+| Windows paths | path-issues |
+| File permissions | permissions |
+
+## Quick Recall Commands
 
 ```
-/experience add [topic] [description]  - Document a new learning
-/experience recall [topic]             - Find past learnings
-/experience list                       - Show all documented lessons
-/experience quick                      - Show quick reference card
+/experience recall git-workflow
+/experience recall antigravity-setup
+/experience recall powershell
+/experience recall path-issues
+/experience recall permissions
+/experience quick
 ```
 
-## Topics Available
+## When I Learn Something New
 
-- antigravity-setup    - CLI tool configuration issues
-- git-workflow         - Git commands and errors  
-- powershell           - Windows PowerShell differences
-- path-issues          - Environment variable handling
-- permissions          - File and folder permissions
+I MUST document it immediately:
+
+```markdown
+### [DATE] - What I Learned
+
+**❌ Mistake:** ...
+**✅ Fix:** ...
+**📝 Why:** ...
+**⚡ Action:** ...
+```
+
+## The Rule
+
+```
+❌ BEFORE: Do task → Make mistake → Move on
+✅ NOW: Recall experience → Do task → Document if new lesson
+```
 
 ## Quick Reference
 
-### Antigravity Setup
+### Antigravity
 ```
-✅ git clone ... ~/.gemini/         (Antigravity)
-❌ git clone ... ~/.gemini/skills/  (Wrong)
-❌ git clone ... ~/.config/antigravity/ (Wrong)
+✅ git clone ... ~/.gemini/      (Antigravity)
+✅ git clone ... ~/.gemini/skills/  (Gemini CLI)
+❌ git clone ... ~/.config/antigravity/ (WRONG!)
 ```
 
-### Git Setup
+### Git
 ```
 git config --global user.name "name"
 git config --global user.email "email"
@@ -44,39 +69,11 @@ git branch -M main
 
 ### PowerShell
 ```
-Get-ChildItem -Force  (not ls -la)
-Get-Content           (not cat)
-Remove-Item -Recurse  (not rm -rf)
+Get-ChildItem -Force    # NOT ls -la
+Get-Content             # NOT cat
+Remove-Item -Recurse   # NOT rm -rf
 ```
 
-## How to Add Experience
-
-When you make a mistake or learn something:
-
-1. Identify the TOPIC
-2. Document using format:
-   ```
-   ### [Date] - Title
-   
-   **❌ Mistake/Error:**
-   What went wrong.
-   
-   **✅ Correction:**
-   What fixed it.
-   
-   **📝 Insight:**
-   Why it happened.
-   
-   **⚡ Action Item:**
-   What to do next time.
-   ```
-
-3. Add to appropriate section
-4. Update table of contents
-5. Update "Total lessons" count
-
-## Remember
-
-Every mistake is a learning opportunity.
-Document it so you never make it twice!
+## This is how I improve.
+Every lesson documented = one less mistake.
 """
