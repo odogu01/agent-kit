@@ -1,0 +1,340 @@
+================================================================================
+                    AGENT KIT - UNIVERSAL SETUP GUIDE
+                    Share Skills Across 15+ AI Coding CLIs
+================================================================================
+
+BY: odogu01 | GITHUB: https://github.com/odogu01/agent-kit
+--------------------------------------------------------------------------------
+
+QUICK START - Choose Your CLI Tool
+================================================================================
+
+| CLI TOOL        | COMMAND (Linux/macOS)                               |
+|-----------------|-----------------------------------------------------|
+| OpenCode        | git clone ... ~/.config/opencode/skills             |
+| Claude Desktop  | git clone ... ~/.claude/skills                      |
+| Gemini CLI      | git clone ... ~/.gemini/skills                      |
+| Antigravity     | git clone ... ~/.config/antigravity/skills         |
+| Cursor          | git clone ... ~/.cursor/skills                     |
+| Windsurf        | git clone ... ~/.windsurf/skills                    |
+| Cline           | git clone ... ~/.cline/skills                       |
+| Continue        | git clone ... ~/.continue/skills                    |
+| Jan             | git clone ... ~/.jan/skills                        |
+| LM Studio       | git clone ... ~/.lm-studio/skills                  |
+| Ollama          | git clone ... ~/.ollama/skills                     |
+
+
+FULL REPOSITORY URL
+================================================================================
+
+https://github.com/odogu01/agent-kit
+
+
+================================================================================
+DETAILED INSTALLATION BY CLI TOOL
+================================================================================
+
+1. OPENCODE
+--------------------------------------------------------------------------------
+Location: ~/.config/opencode/skills/
+
+Linux/macOS:
+    git clone https://github.com/odogu01/agent-kit.git ~/.config/opencode/skills
+
+Windows (PowerShell):
+    git clone https://github.com/odogu01/agent-kit.git "$env:USERPROFILE\.config\opencode\skills"
+
+--------------------------------------------------------------------------------
+
+2. CLAUDE DESKTOP (claude-code)
+--------------------------------------------------------------------------------
+Location: ~/.claude/skills/
+
+Linux/macOS:
+    git clone https://github.com/odogu01/agent-kit.git ~/.claude/skills
+
+Windows (PowerShell):
+    git clone https://github.com/odogu01/agent-kit.git "$env:USERPROFILE\.claude\skills"
+
+--------------------------------------------------------------------------------
+
+3. GEMINI CLI (Google)
+--------------------------------------------------------------------------------
+Location: ~/.gemini/skills/
+
+Linux/macOS:
+    git clone https://github.com/odogu01/agent-kit.git ~/.gemini/skills
+
+Windows (PowerShell):
+    git clone https://github.com/odogu01/agent-kit.git "$env:USERPROFILE\.gemini\skills"
+
+--------------------------------------------------------------------------------
+
+4. ANTIGRAVITY
+--------------------------------------------------------------------------------
+Location: ~/.config/antigravity/skills/
+
+Linux/macOS:
+    git clone https://github.com/odogu01/agent-kit.git ~/.config/antigravity/skills
+
+Windows (PowerShell):
+    git clone https://github.com/odogu01/agent-kit.git "$env:USERPROFILE\.config\antigravity\skills"
+
+--------------------------------------------------------------------------------
+
+5. VS CODE EXTENSIONS
+--------------------------------------------------------------------------------
+
+Cline:
+    git clone https://github.com/odogu01/agent-kit.git ~/.cline/skills
+
+Continue:
+    git clone https://github.com/odogu01/agent-kit.git ~/.continue/skills
+
+Roo Code:
+    git clone https://github.com/odogu01/agent-kit.git ~/.roo/skills
+
+--------------------------------------------------------------------------------
+
+6. CURSOR
+--------------------------------------------------------------------------------
+Location: ~/.cursor/skills/
+
+    git clone https://github.com/odogu01/agent-kit.git ~/.cursor/skills
+
+--------------------------------------------------------------------------------
+
+7. WINDSURF (Codeium)
+--------------------------------------------------------------------------------
+Location: ~/.windsurf/skills/
+
+    git clone https://github.com/odogu01/agent-kit.git ~/.windsurf/skills
+
+--------------------------------------------------------------------------------
+
+8. JAN (Local AI)
+--------------------------------------------------------------------------------
+Location: ~/.jan/skills/
+
+    git clone https://github.com/odogu01/agent-kit.git ~/.jan/skills
+
+--------------------------------------------------------------------------------
+
+9. LM STUDIO
+--------------------------------------------------------------------------------
+Location: ~/.lm-studio/skills/
+
+    git clone https://github.com/odogu01/agent-kit.git ~/.lm-studio/skills
+
+--------------------------------------------------------------------------------
+
+10. OLLAMA
+--------------------------------------------------------------------------------
+Location: ~/.ollama/skills/
+
+    git clone https://github.com/odogu01/agent-kit.git ~/.ollama/skills
+
+--------------------------------------------------------------------------------
+
+11. OTHER CLI TOOLS
+--------------------------------------------------------------------------------
+
+Aider / Shell AI:
+    git clone https://github.com/odogu01/agent-kit.git ~/.aider.skills
+
+Devin:
+    git clone https://github.com/odogu01/agent-kit.git ~/.devin/skills
+
+CodeRabbit:
+    git clone https://github.com/odogu01/agent-kit.git ~/.coderabbit/skills
+
+Goose:
+    git clone https://github.com/odogu01/agent-kit.git ~/.goose/skills
+
+
+================================================================================
+AUTOMATED SETUP SCRIPTS
+================================================================================
+
+LINUX / MACOS (Bash)
+--------------------
+Save as: install-agent-kit.sh
+
+    #!/bin/bash
+    CLI_TOOL=${1:-opencode}
+    case $CLI_TOOL in
+      opencode)     DEST=~/.config/opencode/skills;;
+      claude)       DEST=~/.claude/skills;;
+      gemini)       DEST=~/.gemini/skills;;
+      antigravity)  DEST=~/.config/antigravity/skills;;
+      cursor)       DEST=~/.cursor/skills;;
+      windsurf)     DEST=~/.windsurf/skills;;
+    esac
+    git clone https://github.com/odogu01/agent-kit.git "$DEST"
+    echo "Agent Kit installed to $DEST"
+
+Usage:
+    chmod +x install-agent-kit.sh
+    ./install-agent-kit.sh opencode
+    ./install-agent-kit.sh antigravity
+
+
+WINDOWS (PowerShell)
+--------------------
+Save as: Install-AgentKit.ps1
+
+    param([string]$CLI = "opencode")
+    $dest = switch ($CLI) {
+        "opencode"     { "$env:USERPROFILE\.config\opencode\skills" }
+        "claude"       { "$env:USERPROFILE\.claude\skills" }
+        "gemini"       { "$env:USERPROFILE\.gemini\skills" }
+        "antigravity"  { "$env:USERPROFILE\.config\antigravity\skills" }
+        "cursor"       { "$env:USERPROFILE\.cursor\skills" }
+        "windsurf"     { "$env:USERPROFILE\.windsurf\skills" }
+    }
+    git clone https://github.com/odogu01/agent-kit.git "$dest"
+    Write-Host "Agent Kit installed to $dest"
+
+Usage:
+    .\Install-AgentKit.ps1 -CLI opencode
+    .\Install-AgentKit.ps1 -CLI antigravity
+
+
+================================================================================
+VERIFICATION
+================================================================================
+
+After installation, verify your skills are loaded:
+
+    ls -la ~/.config/opencode/skills/
+
+Should show folders like:
+    api-patterns/
+    app-builder/
+    game-development/
+    react-best-practices/
+    ... (38 skills total)
+
+
+================================================================================
+UPDATING YOUR KIT
+================================================================================
+
+To get the latest skills:
+
+    cd ~/.config/opencode/skills   (adjust for your CLI)
+    git pull origin main
+
+Or re-install fresh:
+
+    rm -rf ~/.config/opencode/skills
+    git clone https://github.com/odogu01/agent-kit.git ~/.config/opencode/skills
+
+
+================================================================================
+WHAT'S INCLUDED - 38 SKILLS
+================================================================================
+
+CORE DEVELOPMENT
+    app-builder          - Full-stack app orchestration
+    plan-writing         - Structured task planning
+    brainstorming        - Socratic questioning for requirements
+    clean-code           - Pragmatic coding standards
+    templates            - 12 project scaffolding templates
+
+FRONTEND & DESIGN
+    react-best-practices - React/Next.js optimization
+    tailwind-patterns    - Tailwind CSS v4
+    frontend-design       - Design thinking for web UI
+    mobile-design        - Mobile-first design
+    web-design-guidelines - Accessibility compliance
+
+BACKEND & ARCHITECTURE
+    nodejs-best-practices - Node.js development
+    python-patterns       - Python patterns
+    rust-pro              - Advanced Rust 1.75+
+    api-patterns          - REST/GraphQL/tRPC design
+    architecture          - Architectural decisions
+
+DATABASE
+    database-design      - Schema, indexing, ORM
+
+GAME DEVELOPMENT
+    game-development     - Main orchestrator
+    game-design          - GDD, balancing
+    game-art             - Visual style, assets
+    2d-games             - Sprites, tilemaps
+    3d-games             - Rendering, shaders
+    web-games            - WebGPU, PWA
+    mobile-games          - Touch input, performance
+    multiplayer          - Networking, sync
+    vr-ar                - VR/AR development
+
+SECURITY
+    vulnerability-scanner - OWASP 2025
+    red-team-tactics      - MITRE ATT&CK
+
+TESTING & QUALITY
+    testing-patterns     - Unit, integration, mocking
+    tdd-workflow         - Test-Driven Development
+    lint-and-validate    - Static analysis
+    webapp-testing       - E2E, Playwright
+
+DEVOPS & PERFORMANCE
+    deployment-procedures - Safe deployment, rollback
+    server-management     - Process, scaling
+    performance-profiling - Measurement, optimization
+
+OTHER
+    seo-fundamentals     - Core Web Vitals
+    i18n-localization     - Translations, RTL
+    mcp-builder           - MCP server design
+    parallel-agents       - Multi-agent orchestration
+
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+"Permission denied"
+    chmod +x install-agent-kit.sh
+
+"Path not found"
+    mkdir -p ~/.config/opencode
+    git clone https://github.com/odogu01/agent-kit.git ~/.config/opencode/skills
+
+"Skills not loading"
+    Check your CLI's config file and ensure the skills path is correct.
+
+
+================================================================================
+CONTRIBUTING
+================================================================================
+
+Found a new CLI or want to add a skill?
+
+1. Fork the repository
+2. Clone your fork
+3. Add your skill or CLI setup guide
+4. Commit: git commit -m "Add [CLI] setup"
+5. Push and open a Pull Request
+
+
+================================================================================
+LICENSE
+================================================================================
+
+MIT License - Use, modify, and share freely!
+
+
+================================================================================
+CREDITS
+================================================================================
+
+Created with love by odogu01
+GitHub: https://github.com/odogu01/agent-kit
+
+If this helped you, please star the repo! ⭐
+
+
+================================================================================
