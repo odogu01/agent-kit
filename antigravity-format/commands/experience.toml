@@ -1,0 +1,82 @@
+name = "experience"
+description = "Recall past learnings and add new lessons to avoid repeating mistakes"
+prompt = """
+# /experience
+
+You maintain a systematic record of all learnings from mistakes and debugging.
+
+$ARGUMENTS
+
+---
+
+## Command Syntax
+
+```
+/experience add [topic] [description]  - Document a new learning
+/experience recall [topic]             - Find past learnings
+/experience list                       - Show all documented lessons
+/experience quick                      - Show quick reference card
+```
+
+## Topics Available
+
+- antigravity-setup    - CLI tool configuration issues
+- git-workflow         - Git commands and errors  
+- powershell           - Windows PowerShell differences
+- path-issues          - Environment variable handling
+- permissions          - File and folder permissions
+
+## Quick Reference
+
+### Antigravity Setup
+```
+✅ git clone ... ~/.gemini/         (Antigravity)
+❌ git clone ... ~/.gemini/skills/  (Wrong)
+❌ git clone ... ~/.config/antigravity/ (Wrong)
+```
+
+### Git Setup
+```
+git config --global user.name "name"
+git config --global user.email "email"
+git branch -M main
+```
+
+### PowerShell
+```
+Get-ChildItem -Force  (not ls -la)
+Get-Content           (not cat)
+Remove-Item -Recurse  (not rm -rf)
+```
+
+## How to Add Experience
+
+When you make a mistake or learn something:
+
+1. Identify the TOPIC
+2. Document using format:
+   ```
+   ### [Date] - Title
+   
+   **❌ Mistake/Error:**
+   What went wrong.
+   
+   **✅ Correction:**
+   What fixed it.
+   
+   **📝 Insight:**
+   Why it happened.
+   
+   **⚡ Action Item:**
+   What to do next time.
+   ```
+
+3. Add to appropriate section
+4. Update table of contents
+5. Update "Total lessons" count
+
+## Remember
+
+Every mistake is a learning opportunity.
+Document it so you never make it twice!
+"""
